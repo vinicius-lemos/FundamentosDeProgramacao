@@ -1,0 +1,26 @@
+#include <stdio.h>
+void mm_vetor(int num[], int n, int *menor, int *maior){
+    *menor = num[0];
+    *maior = num[0];
+
+    for(int i = 1; i < n; i++){
+        if(num[i] < *menor) *menor = num[i];
+        if(num[i] > *maior) *maior = num[i];
+    }
+}
+//-----------------------------------
+int main(){
+    int n;
+    scanf("%d", &n);
+
+    int numeros[n];
+    for(int i = 0; i < n; i++) scanf("%d", &numeros[i]);
+
+    int menor, maior;
+
+    mm_vetor(numeros, n, &menor, &maior);
+
+    printf("%d %d", menor, maior);
+
+    return 1;
+}

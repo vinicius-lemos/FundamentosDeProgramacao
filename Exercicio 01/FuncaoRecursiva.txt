@@ -1,0 +1,17 @@
+#include <stdio.h>
+int fatorial(int n){
+    int v = 1;
+    if(n > 1) v = n * fatorial(n-1);
+    return v;
+}
+//----------------------------------
+int main(){
+    int n;
+    scanf("%d", &n);
+
+    int fat = fatorial(n);
+
+    printf("%d", fat);
+
+    return 1;
+}
